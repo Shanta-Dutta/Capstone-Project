@@ -8,6 +8,8 @@ import com.cranban.springboot.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -31,7 +33,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
-     @GetMapping("api/todoItems")
+     @GetMapping("/api/todoItems")
      public ResponseEntity<?> fetchAllToDoItems() {
          List<TodoItem> todoItems = todoService.fetchAllToDoItems();
          return ResponseEntity.ok(todoItems);
@@ -61,4 +63,10 @@ import org.springframework.web.bind.annotation.*;
          return ResponseEntity.ok("ok");
 
      }
+     @GetMapping("/api/todoItems/principal")
+public ResponseEntity<?> getPrincipal( @AuthenticationPrincipal OAuth2User principal ){
+         return ResponseEntity.ok(principal);
+}
+
+
  }
