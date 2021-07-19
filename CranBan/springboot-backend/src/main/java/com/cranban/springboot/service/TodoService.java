@@ -21,14 +21,14 @@ public class TodoService {
     public TodoItem updateTodoItem(Integer id, TodoItem todoItem) {
       Optional<TodoItem> todoOpt =  todoRepo.fetchAllTodoItems()
                                     .stream()
-                                    .filter(item -> item.getId().equals(id))
+                                    .filter(item -> item.getTimeId().equals(id))
                                     .findAny();
 
       if (todoOpt.isPresent()){
 
           TodoItem item = todoOpt.get();
           item.setIsDone(todoItem.getIsDone());
-          item.setTask(todoItem.getTask());
+          item.setTaskText(todoItem.getTaskText());
           return item;
       }
 
@@ -36,10 +36,10 @@ public class TodoService {
     }
 
     public TodoItem createTodoItem() {
-        TodoItem todoItem = new TodoItem();
+        TodoItem todoItem = new TodoItem(1,"add something",1);
         todoItem.setIsDone(false);
         todoItem = todoRepo.save(todoItem);
-        todoItem.setTask("Task #" + todoItem.getId());
+        todoItem.setTaskText("Task #" + todoItem.getTimeId());
         return todoItem;
     }
 

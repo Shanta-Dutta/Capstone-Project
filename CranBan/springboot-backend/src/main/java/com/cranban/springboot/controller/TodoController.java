@@ -3,6 +3,7 @@ package com.cranban.springboot.controller;
 import java.util.List;
 
 import com.cranban.springboot.domain.TodoItem;
+import com.cranban.springboot.model.ToDoList;
 import com.cranban.springboot.model.User;
 import com.cranban.springboot.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +68,12 @@ import org.springframework.web.bind.annotation.*;
 public ResponseEntity<?> getPrincipal( @AuthenticationPrincipal OAuth2User principal ){
          return ResponseEntity.ok(principal);
 }
+    @GetMapping("/api/lists")
+     public ResponseEntity<?> getLists(){
+        List<ToDoList> myList = List.of(new ToDoList("Starter",1,List.of(new TodoItem(1,"add something",1))));
+         return ResponseEntity.ok(myList);
+    }
+
 
 
  }

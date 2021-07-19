@@ -27,6 +27,7 @@ public class OAuth2Configuration extends WebSecurityConfigurerAdapter
                 .authorizeRequests(a -> a
                         .antMatchers("/", "/error", "/webjars/**","/login").permitAll()
                         .antMatchers("/api/todoItems/**").permitAll()
+                        .antMatchers("/api/lists/**").permitAll()
                         .anyRequest().authenticated()
                 )
 //                .exceptionHandling(e -> e

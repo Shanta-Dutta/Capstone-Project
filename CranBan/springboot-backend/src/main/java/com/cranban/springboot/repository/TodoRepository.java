@@ -13,10 +13,10 @@ public class TodoRepository {
     private List<TodoItem> todoItems = new ArrayList<>();
     public List<TodoItem> fetchAllTodoItems(){
        if (todoItems.size() == 0) {
-           TodoItem item1 = new TodoItem();
-           item1.setId(idCounter++);
+           TodoItem item1 = new TodoItem(1,"add something",1);
+           item1.setTimeId(idCounter++);
            item1.setIsDone(true);
-           item1.setTask("Task 1");
+           item1.setTaskText("Task 1");
            todoItems.add(item1);
         }
         return todoItems;
@@ -25,14 +25,14 @@ public class TodoRepository {
 
 
     public TodoItem save (TodoItem todoItem){
-        todoItem.setId((idCounter++));
+        todoItem.setTimeId((idCounter++));
         todoItems.add(todoItem);
         return todoItem;
     }
 
     public void delete(Integer id) {
       todoItems = todoItems.stream()
-                 .filter(todoItem -> !todoItem.getId().equals(id))
+                 .filter(todoItem -> !todoItem.getTimeId().equals(id))
                 .collect(Collectors.toList());
     }
 }
