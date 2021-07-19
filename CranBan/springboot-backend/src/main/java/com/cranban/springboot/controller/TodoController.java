@@ -70,7 +70,8 @@ public ResponseEntity<?> getPrincipal( @AuthenticationPrincipal OAuth2User princ
 }
     @GetMapping("/api/lists")
      public ResponseEntity<?> getLists(){
-        List<ToDoList> myList = List.of(new ToDoList("Starter",1,List.of(new TodoItem(1,"add something",1))));
+        List<ToDoList> myList = List.of(new ToDoList("Starter",1,List.of(new TodoItem(1,"add something",1),
+                (new TodoItem(2,"add something",2)))));
          return ResponseEntity.ok(myList);
     }
 
