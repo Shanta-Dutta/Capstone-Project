@@ -1,6 +1,6 @@
 package com.cranban.springboot;
 
-import com.cranban.springboot.model.User;
+
 import com.cranban.springboot.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

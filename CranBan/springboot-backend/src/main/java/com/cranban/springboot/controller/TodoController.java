@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.cranban.springboot.domain.TodoItem;
 import com.cranban.springboot.model.ToDoList;
-import com.cranban.springboot.model.User;
 import com.cranban.springboot.service.TodoService;
+import com.cranban.springboot.service.TodolistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,8 @@ import org.springframework.web.bind.annotation.*;
      //front end <-- controller <-- Service <-- Repository
      @Autowired
      private TodoService todoService;
-
+    @Autowired
+    private TodolistService todolistService;
      //How does CRUD work?
     // Create = POST = 'http://localhost:8080/api/domainObjejectName'
      //Read = GET  = 'http://localhost:8080/api/domainObjejectName' or 'http://localhost:8080/api/domainObjejectName/{id}'
@@ -70,11 +71,21 @@ public ResponseEntity<?> getPrincipal( @AuthenticationPrincipal OAuth2User princ
 }
     @GetMapping("/api/lists")
      public ResponseEntity<?> getLists(){
-        List<ToDoList> myList = List.of(new ToDoList("Starter",1,List.of(new TodoItem(1,"add something",1),
-                (new TodoItem(2,"add something",2)))));
-         return ResponseEntity.ok(myList);
+//        List<ToDoList> myList = List.of(new ToDoList("Starter",1,List.of(new TodoItem(1,"add something",1),
+//                (new TodoItem(2,"add something",2)))));
+        Iterable<ToDoList> myLists = todolistService.getLists();
+         return ResponseEntity.ok(myLists);
+
     }
 
+    @PostMapping("api/lists/post")
+     public ToDoList postList(@RequestBody ToDoList toDoList){
+return todolistService.postToDoList(toDoList);
+    }
 
+    @PostMapping("api/lists/post/all")
+     public List<ToDoList> postAllLists(@RequestBody List<ToDoList> allLists ){
+         return (List<ToDoList>) todolistService.postAllLists(allLists);
+    }
 
  }

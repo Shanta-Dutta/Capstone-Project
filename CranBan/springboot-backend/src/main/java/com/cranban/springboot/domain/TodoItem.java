@@ -1,18 +1,25 @@
 package com.cranban.springboot.domain;
 
 import com.cranban.springboot.model.ToDoList;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.util.Objects;
-
+@Entity
 @Data
-public class TodoItem {
 
+public class TodoItem {
+@Id
     private Integer timeId;
     private String taskText;
     private Boolean isDone;
     private Integer listNumber;
-
+    @ManyToOne
+    @JsonIgnore
+    private ToDoList toDoList;
 
     public TodoItem(int i, String task, Integer listnumber) {
         this.timeId = i;
@@ -35,6 +42,9 @@ public class TodoItem {
         return Objects.hash(timeId, taskText, isDone, listNumber);
     }
 
+    public TodoItem(){
+
+    }
     @Override
     public String toString() {
         return "TodoItem{" +
