@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class TodolistService {
     @Autowired
@@ -21,6 +23,10 @@ public class TodolistService {
 
 public ToDoList postToDoList(ToDoList toDoList){
         return todolistRepository.save(toDoList);
+}
+
+public Optional<ToDoList> findById (Long id) {
+        return todolistRepository.findById(id);
 }
 
 }

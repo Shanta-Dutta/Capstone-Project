@@ -13,7 +13,7 @@ import java.util.Objects;
 
 public class TodoItem {
 @Id
-    private Integer timeId;
+    private Long timeId;
     private String taskText;
     private Boolean isDone;
     private Integer listNumber;
@@ -21,7 +21,7 @@ public class TodoItem {
     @JsonIgnore
     private ToDoList toDoList;
 
-    public TodoItem(int i, String task, Integer listnumber) {
+    public TodoItem(Long i, String task, Integer listnumber) {
         this.timeId = i;
         this.taskText = task;
         this.listNumber = listnumber;

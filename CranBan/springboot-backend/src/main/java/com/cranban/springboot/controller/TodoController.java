@@ -42,14 +42,14 @@ import org.springframework.web.bind.annotation.*;
      }
 
      @PostMapping("/api/todoItems")
-     public ResponseEntity<?>createNewTodoItem(){
-       TodoItem todoItem =  todoService.createTodoItem();
+     public ResponseEntity<?>createNewTodoItem(@RequestBody TodoItem todoItem){
+        todoService.createTodoItem(todoItem);
         return ResponseEntity.ok(todoItem);
 
      }
 
      @PutMapping("/api/todoItems/{id}")
-     public ResponseEntity<?> updateToDoItems(@PathVariable Integer id, @RequestBody TodoItem todoItem) {
+     public ResponseEntity<?> updateToDoItems(@PathVariable Long id, @RequestBody TodoItem todoItem) {
         // Here "todoItem" is basically the  JSON "body" that is passed here // Call the service
          //get the data back from server
         TodoItem updatedTodoItem = todoService.updateTodoItem(id, todoItem);
@@ -60,7 +60,7 @@ import org.springframework.web.bind.annotation.*;
      }
 
      @DeleteMapping("/api/todoItems/{id}")
-     public ResponseEntity<?> deleteTodoItem(@PathVariable Integer id){
+     public ResponseEntity<?> deleteTodoItem(@PathVariable Long id){
           todoService.deleteTodoItem(id);
          return ResponseEntity.ok("ok");
 

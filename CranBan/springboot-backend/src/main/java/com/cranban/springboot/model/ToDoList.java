@@ -11,7 +11,7 @@ public class ToDoList {
     private String title;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     public ToDoList(String title, List<TodoItem> cards) {
         this.title = title;
