@@ -7,15 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Capstone-Project" />
         <module name="springboot-backend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Capstone-Project" target="11" />
       <module name="springboot-backend" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Capstone-Project" options="-parameters" />
       <module name="springboot-backend" options="-parameters" />
     </option>
   </component>

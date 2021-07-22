@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f58c0c34-4de5-4610-a44e-0d362ecdfceb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/SpringbootBackendApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/configuration/OAuth2Configuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/controller/TodoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/domain/TodoItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/model/ToDoList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/repository/TodoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/repository/TodolistRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/service/TodoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cranban/springboot/service/TodolistService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cranban/springboot/SpringbootBackendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/SpringbootBackendApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/configuration/OAuth2Configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/controller/TodoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/domain/TodoItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/model/ToDoList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/repository/TodoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/repository/TodolistRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/service/TodoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cranban/springboot/service/TodolistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cranban/springboot/SpringbootBackendApplicationTests.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1vdq1i9gS2cjE0aK02fWFaInsHM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringbootBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cranban.springboot.SpringbootBackendApplication" />
+      <module name="springboot-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cranban.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringbootBackendApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f58c0c34-4de5-4610-a44e-0d362ecdfceb" name="Default Changelist" comment="" />
+      <created>1626902100389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626902100389</updated>
+    </task>
+    <servers />
+  </component>
+</project>
